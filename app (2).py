@@ -109,9 +109,13 @@ def calc_score(layout, wide, tall, spacious, compact):
     if wide:
         if width > height:
             score += 4
+        else:
+            score -= 6    
     if tall:
         if height > width:
             score += 4
+        else:
+            score -= 6
     if spacious:
         score += len(layout) * 2
     if compact:
